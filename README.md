@@ -1,0 +1,1 @@
+hi creating a dynamic pricing app 

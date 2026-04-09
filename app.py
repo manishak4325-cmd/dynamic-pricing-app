@@ -101,3 +101,28 @@ with st.expander("📊 See Calculation Details"):
     st.write(f"Demand Factor: {round(demand_factor, 2)}")
     st.write(f"Supply Factor: {round(supply_factor, 2)}")
     st.write(f"Time Factor: {time_factor}")
+
+import matplotlib.pyplot as plt
+
+# Graph Section
+st.divider()
+st.markdown("## 📊 Demand vs Price Graph")
+
+# Generate values
+demand_values = list(range(0, 101, 10))
+prices = []
+
+for d in demand_values:
+    demand_factor = 1 + (d / 100)
+    price = base_price * demand_factor * time_factor / supply_factor
+    prices.append(price)
+
+# Plot graph
+fig, ax = plt.subplots()
+ax.plot(demand_values, prices, marker='o')
+
+ax.set_xlabel("Demand")
+ax.set_ylabel("Price")
+ax.set_title("Price Variation with Demand")
+
+st.pyplot(fig)    
