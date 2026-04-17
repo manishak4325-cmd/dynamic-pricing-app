@@ -31,7 +31,7 @@
 
 ## 🌐 Live Demo
 
-👉 *Add your deployed link here*
+👉 *[https://dynamic-pricing-app-utcvuqpgf96dgtloq6l3d8.streamlit.app/]*
 
 ---
 
